@@ -17,7 +17,7 @@ def move_pdf(source = 'C:\\Users\\LenovoPc\\Desktop\\MicroBiology\\', dest = "C:
         os.replace(source + pdf_filename, dest + pdf_filename)
         print(pdf_filename, "was successfuly moved")
 
-    return dest + pdf_filename
+    return [dest, pdf_filename]
 
 if __name__ == "__main__":
     move_pdf()
