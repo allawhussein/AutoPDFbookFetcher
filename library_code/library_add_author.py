@@ -14,3 +14,5 @@ def add_author(driver, author_name, author_description):
     for button in driver.find_elements(by=By.TAG_NAME, value="button"):
         if "إضافة" in button.text:
             button.click()
+
+    author_name_field = driver.find_element(by=By.NAME, value="name")
