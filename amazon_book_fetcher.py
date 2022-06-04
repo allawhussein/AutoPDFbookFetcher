@@ -14,4 +14,5 @@ def amazon(filename):
     x =input()
 
 if __name__ == '__main__':
-    amazon()
+    dest, pdf_filename = pdf_file_fetcher.move_pdf()
+    amazon(pdf_filename + "amazon")
