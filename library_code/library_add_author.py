@@ -21,6 +21,9 @@ def add_author(driver, author_name, author_description = ""):
     for button in driver.find_elements(by=By.TAG_NAME, value="button"):
         if "أضف" in button.text:
             driver.execute_script("arguments[0].click();", button)
+    
+    while driver.execute_script("return document.readyState;") != "complete":
+        pass
 
 if __name__ == "__main__":
     import library_login
