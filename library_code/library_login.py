@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 
-from local_credentials import *
+from local_credentials_and_urls import *
 
 def login(username = login_username, password = login_password):
     driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
