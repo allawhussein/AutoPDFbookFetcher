@@ -1,5 +1,5 @@
-local_library_code/
 geckodriver.log
 .vscode/
 *.pyc
+local_credentials.py
 learning_selenium.py

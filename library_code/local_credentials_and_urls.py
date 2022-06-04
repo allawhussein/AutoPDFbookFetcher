@@ -1,0 +1,5 @@
+login_url = "https://books.tarbaweya.org/bkendpan/index_login.php"
+login_username = "user4"
+login_password = "password"
+author_url = "https://books.tarbaweya.org/bkendpan/authors.php?action=display"
+main_page_url = "https://books.tarbaweya.org/bkendpan/main.php"
