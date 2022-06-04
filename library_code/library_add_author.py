@@ -8,3 +8,7 @@ from local_credentials_and_urls import *
 
 def add_author(driver, author_name, author_description):
     driver.get(author_url)
+    while driver.execute_script("return document.readyState;") != "complete":
+        pass
+
+    
