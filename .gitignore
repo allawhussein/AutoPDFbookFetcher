@@ -1,8 +1,5 @@
 geckodriver.log
 .vscode/
 *.pyc
-<<<<<<< HEAD
 local_credentials.py
-=======
 learning_selenium.py
->>>>>>> 7a045dbd9e29b6a76da0acfe37429016ded0eef4
