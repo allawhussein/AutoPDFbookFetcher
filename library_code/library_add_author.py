@@ -19,10 +19,10 @@ def add_author(driver, author_name, author_description = ""):
     author_name_field.send_keys(author_name)
 
     for button in driver.find_elements(by=By.TAG_NAME, value="button"):
-        if "إضافة" in button.text:
+        if "أضف" in button.text:
             driver.execute_script("arguments[0].click();", button)
 
 if __name__ == "__main__":
     import library_login
     driver = library_login.login()
-    add_author(driver, "Kurt E. Johnson")
+    add_author(driver, "Paul N. MacDonald")
