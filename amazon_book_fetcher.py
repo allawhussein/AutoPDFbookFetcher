@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
-def amazon(filename = pdf_filename + 'amazon'):
+def amazon(filename):
     driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com")
     
