@@ -4,8 +4,6 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
-
-
 def amazon(filename):
     
     if '.pdf' in filename:
