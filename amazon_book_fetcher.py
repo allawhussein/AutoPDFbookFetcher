@@ -11,10 +11,7 @@ def amazon(filename):
         final_fn = filename.replace('.pdf', '')
     driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + final_fn + '&tbm=bks')
-   
-    
-    search.send_keys(final_fn)
-    search.send_keys(Keys.RETURN)
+
     x =input()
 
 if __name__ == '__main__':
