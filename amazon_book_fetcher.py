@@ -4,9 +4,11 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
+
+
 def amazon(filename):
     driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
-    driver.get("https://www.google.com")
+    driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
     
     search = driver.find_element_by_name("q")
     search.send_keys(filename)
