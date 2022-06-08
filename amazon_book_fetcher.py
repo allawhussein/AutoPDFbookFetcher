@@ -9,8 +9,8 @@ import pdf_file_fetcher
 def amazon(filename):
     if '.pdf' in filename:
         final_fn = filename.replace('.pdf', '')
-        driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
-        driver.get("https://www.google.com/search?q=" + final_fn + '&tbm=bks')
+    driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
+    driver.get("https://www.google.com/search?q=" + final_fn + '&tbm=bks')
     
     search = driver.find_element_by_name("q")
     search.send_keys(final_fn)
