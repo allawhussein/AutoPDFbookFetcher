@@ -13,6 +13,9 @@ def google_books(filename, driver = None):
         driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
 
+    #searching for the first book card
+    book_card = driver.find_element(by = By.CLASS_NAME, value= "Yr5TG")
+
     #searching for the book name
     for h3_tag in driver.find_elements(by= By.TAG_NAME, value= "h3"):
         if "LC20lb MBeuO DKV0Md" in h3_tag.get_attribute("class"):
