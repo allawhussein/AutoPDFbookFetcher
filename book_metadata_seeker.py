@@ -28,10 +28,9 @@ def google_books(filename, driver = None):
     author_name_field = book_card.find_element(by= By.CLASS_NAME, value= "N96wpd")
     author_name_field_spans = author_name_field.find_elements(by = By.TAG_NAME, value= "span")
     authors = []
-    for author_element in author_name_field_spans[:-1]:
+    for author_element in author_name_field_spans[:-2]:
         authors.append(author_element.text)
-    publication_date = authors[-1].text
-    
+    publication_date = author_name_field_spans[-1].text
     #searching for book preview
     book_preview = book_card.find_element(by= By.CLASS_NAME, value= "cmlJmd").text
 
