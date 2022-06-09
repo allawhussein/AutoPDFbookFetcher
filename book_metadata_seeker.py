@@ -5,11 +5,11 @@ from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
 def google_books(filename, driver = None):
-    final_fn = filename.replace('.pdf', '')
+    filename = filename.replace('.pdf', '')
 
     if driver == None:
         driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
-    driver.get("https://www.google.com/search?q=" + final_fn + '&tbm=bks')
+    driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
     x =input()
 
 if __name__ == '__main__':
