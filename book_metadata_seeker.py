@@ -32,7 +32,10 @@ def google_books(filename, driver = None):
         authors.append(author_element.text)
     publication_date = authors[-1].text
     
-    return book_name, authors, publication_date
+    #searching for book preview
+    book_preview = book_card.find_element(by= By.CLASS_NAME, value= "cmlJmd").text
+
+    return book_name, authors, publication_date, book_preview
 
 if __name__ == '__main__':
     # #this source, destination are for Hussein Allaw
