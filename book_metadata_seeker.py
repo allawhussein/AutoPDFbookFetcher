@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
-def amazon(filename):
+def google_books(filename):
     if '.pdf' in filename:
         final_fn = filename.replace('.pdf', '')
 
@@ -19,4 +19,4 @@ if __name__ == '__main__':
     # dest, pdf_filename = pdf_file_fetcher.move_pdf(source, dest)
     #this source, destination is for S. Jinan Al-Mswi
     dest, pdf_filename = pdf_file_fetcher.move_pdf()
-    amazon(pdf_filename)
+    google_books(pdf_filename)
