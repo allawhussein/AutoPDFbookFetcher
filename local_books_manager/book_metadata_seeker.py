@@ -4,8 +4,6 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 
-import pdf_file_fetcher
-
 def google_books(filename, driver = None):
     filename = filename.replace('.pdf', '')
 
@@ -36,10 +34,4 @@ def google_books(filename, driver = None):
     return book_name, authors, publication_date, book_preview
 
 if __name__ == '__main__':
-    # #this source, destination are for Hussein Allaw
-    # src = "C:\\Users\\Hussein\\Desktop\\Microbiology\\"
-    # dest = "C:\\Users\\Hussein\\Desktop\\Microbiology\\DONE-MicroBiology\\"
-    # dest, pdf_filename = pdf_file_fetcher.move_pdf(source, dest)
-    #this source, destination is for S. Jinan Al-Mswi
-    #dest, pdf_filename = pdf_file_fetcher.move_pdf()
     print(google_books("Applied Mycology by Mahendra Rai, Paul Dennis Bridge (z-lib.org).pdf"))
