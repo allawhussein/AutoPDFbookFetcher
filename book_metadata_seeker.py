@@ -4,11 +4,12 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
-def google_books(filename):
+def google_books(filename, driver = None):
     if '.pdf' in filename:
         final_fn = filename.replace('.pdf', '')
 
-    driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
+    if driver == None:
+        driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + final_fn + '&tbm=bks')
     x =input()
 
