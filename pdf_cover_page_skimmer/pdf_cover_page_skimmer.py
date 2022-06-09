@@ -7,5 +7,6 @@ def create_cover_image(pdf_path, target_path, pdf_filename):
 
 if __name__ == "__main__":
     pdf_path= "C:\\Users\\Hussein\\Desktop\\MicroBiology\\Wastewater Microbiology - Gabriel Bitton.pdf"
-    target_path= "C:\\Users\\Hussein\\Desktop\\MicroBiology\\Images-Microbiolog"
-    create_cover_image(pdf_path, target_path)
+    target_path= "C:\\Users\\Hussein\\Desktop\\MicroBiology\\Images-Microbiolog\\"
+    pdf_filename= "Wastewater Microbiology - Gabriel Bitton.pdf"
+    create_cover_image(pdf_path, target_path, pdf_filename)
