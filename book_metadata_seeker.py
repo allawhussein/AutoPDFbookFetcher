@@ -5,8 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
 def google_books(filename, driver = None):
-    if '.pdf' in filename:
-        final_fn = filename.replace('.pdf', '')
+    final_fn = filename.replace('.pdf', '')
 
     if driver == None:
         driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
