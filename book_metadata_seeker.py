@@ -10,7 +10,6 @@ def google_books(filename, driver = None):
     if driver == None:
         driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
-    x =input()
 
 if __name__ == '__main__':
     # #this source, destination are for Hussein Allaw
