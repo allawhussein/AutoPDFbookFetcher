@@ -25,6 +25,14 @@ def google_books(filename, driver = None):
         book_name = None
     
     #searching for the book author
+    author_name_field = book_card.find_element(by= By.CLASS_NAME, value= "N96wpd")
+    author_name_field_spans = author_name_field.find_elements(by = By.TAG_NAME, value= "span")
+    authors = []
+    for author_element in author_name_field_spans[:-1]:
+        authors.append(author_element.text)
+    publication_date = authors[-1].text
+    
+    return book_name, authors, publication_date
 
 if __name__ == '__main__':
     # #this source, destination are for Hussein Allaw
