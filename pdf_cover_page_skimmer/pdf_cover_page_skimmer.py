@@ -1,4 +1,3 @@
-import os
 from pdf2image import convert_from_path
 
 def create_cover_image(pdf_path, target_path, pdf_filename):
