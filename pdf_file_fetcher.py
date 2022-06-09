@@ -4,14 +4,11 @@ import shutil as sh
 
 def move_pdf(source = 'C:\\Users\\LenovoPc\\Desktop\\MicroBiology\\', dest = "C:\\Users\\LenovoPc\\Desktop\\Destination\\"):
     pdf_filename = ""
-
-
     for filename in os.listdir(source):
         if '.pdf' in filename:
             pdf_filename = filename
             print(filename)
             break
-
 
     if (pdf_filename != ""):
         os.replace(source + pdf_filename, dest + pdf_filename)
