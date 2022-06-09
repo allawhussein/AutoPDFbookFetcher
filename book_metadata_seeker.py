@@ -1,7 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.common.keys import Keys
+
 import pdf_file_fetcher
 
 def google_books(filename, driver = None):
@@ -10,6 +12,16 @@ def google_books(filename, driver = None):
     if driver == None:
         driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
+
+    #searching for the book name
+    for h3_tag in driver.find_elements(by= By.TAG_NAME, value= "h3"):
+        if "LC20lb MBeuO DKV0Md" in h3_tag.get_attribute("class"):
+            author_name = h3_tag.text
+            break
+    else:
+        author_name = None
+    
+    #searching for the book author
 
 if __name__ == '__main__':
     # #this source, destination are for Hussein Allaw
