@@ -17,12 +17,12 @@ def google_books(filename, driver = None):
     book_card = driver.find_element(by = By.CLASS_NAME, value= "Yr5TG")
 
     #searching for the book name
-    for h3_tag in driver.find_elements(by= By.TAG_NAME, value= "h3"):
+    for h3_tag in book_card.find_elements(by= By.TAG_NAME, value= "h3"):
         if "LC20lb MBeuO DKV0Md" in h3_tag.get_attribute("class"):
-            author_name = h3_tag.text
+            book_name = h3_tag.text
             break
     else:
-        author_name = None
+        book_name = None
     
     #searching for the book author
 
