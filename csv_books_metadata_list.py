@@ -7,8 +7,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 from pdf_cover_page_skimmer import pdf_cover_page_skimmer
 from local_books_manager import book_metadata_seeker
-from local_books_manager import csv_details_fetcher
-from local_books_manager import pdf_file_fetcher
+from local_books_manager import details_fetcher_to_csv
 
 source_folder_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\"
 destination_folder_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\DONE-MicroBiology\\"
