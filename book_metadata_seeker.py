@@ -11,8 +11,7 @@ def google_books(filename, driver = None):
 
     if driver == None:
         driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
-    driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
-
+    driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks&hl=en')
     #searching for the first book card
     book_card = driver.find_element(by = By.CLASS_NAME, value= "Yr5TG")
 
