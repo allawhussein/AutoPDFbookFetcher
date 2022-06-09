@@ -8,7 +8,7 @@ def google_books(filename, driver = None):
     filename = filename.replace('.pdf', '')
 
     if driver == None:
-        driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
+        driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + filename + '&tbm=bks')
     x =input()
 
