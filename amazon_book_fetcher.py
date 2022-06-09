@@ -5,9 +5,9 @@ from selenium.webdriver.common.keys import Keys
 import pdf_file_fetcher
 
 def amazon(filename):
-    
+
     if '.pdf' in filename:
-        final_fn = filename.replace('.pdf', '+')
+        final_fn = filename.replace('.pdf', '')
 
     driver = driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get("https://www.google.com/search?q=" + final_fn + '&tbm=bks')
