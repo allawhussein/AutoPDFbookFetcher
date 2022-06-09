@@ -15,10 +15,8 @@ image_folder_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\Images-Microbiolo
 csv_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\Microbiology Metadata.csv"
 driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
 
-book_paths= []
 for filename in os.listdir(source_folder_path):
     if ".pdf" in filename:
-        book = []
         image_path= pdf_cover_page_skimmer.create_cover_image(source_folder_path, image_folder_path, filename)
         book_name, book_authors, publication_date, book_review = book_metadata_seeker.google_books(filename, driver)
         book_path = source_folder_path + filename
