@@ -5,7 +5,7 @@ def csv_book_details(book_name, book_author, book_path, csv_path):#this is what 
 
         path = 'C:\\Users\\LenovoPc\\Desktop\\CSV Book_Details\\'
 
-        join = os.path.join(csv_path, 'books.txt'
+        join = os.path.join(csv_path, 'books.txt')
 
         make = os.makedirs(join)
 

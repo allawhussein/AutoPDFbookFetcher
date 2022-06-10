@@ -6,6 +6,9 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 from local_credentials_and_urls import *
 
+# for more details about selenium chrome driver setup refer to
+# https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/python/tests/getting_started/test_install_drivers.py
+
 def login(username = login_username, password = login_password):
     driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
     driver.get(login_url)
