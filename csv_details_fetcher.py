@@ -1,14 +1,15 @@
 import os
+path = 'C:\\Users\\LenovoPc\\Desktop\\CSV Book_Details\\'
+
+join = os.path.join(csv_path, 'books.txt')
+make = os.makedirs(join)
 
 def csv_book_details(book_name, book_author, book_path, csv_path):#this is what I mean by argument, and passing stuff through it
     if not os.path.exists(csv_path):
 
-        path = 'C:\\Users\\LenovoPc\\Desktop\\CSV Book_Details\\'
+        
 
-        join = os.path.join(csv_path, 'books.txt')
-
-        make = os.makedirs(join)
-
+        
         f = open(make, "a")   
 
         f.write('Book name: ' + book_name)
