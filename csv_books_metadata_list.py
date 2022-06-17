@@ -11,7 +11,7 @@ from local_books_manager import details_fetcher_to_csv
 
 source_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology\\"
 destination_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology\\DONE-MicroBiology\\"
-image_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Images-Microbiolog\\"
+image_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology\\Images-Microbiolog\\"
 csv_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology Metadata.csv"
 driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
 
