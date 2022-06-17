@@ -4,3 +4,4 @@ geckodriver.log
 local_credentials.py
 learning_selenium.py
 MicroBiology/
+*.csv
