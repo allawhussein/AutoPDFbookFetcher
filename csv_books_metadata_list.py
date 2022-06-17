@@ -9,10 +9,10 @@ from pdf_cover_page_skimmer import pdf_cover_page_skimmer
 from local_books_manager import book_metadata_seeker
 from local_books_manager import details_fetcher_to_csv
 
-source_folder_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\"
-destination_folder_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\DONE-MicroBiology\\"
-image_folder_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\Images-Microbiolog\\"
-csv_path= "C:\\Users\\Hussein\\Desktop\\Microbiology\\Microbiology Metadata.csv"
+source_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology\\"
+destination_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology\\DONE-MicroBiology\\"
+image_folder_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Images-Microbiolog\\"
+csv_path= "D:\\programming\\Projects\\AutoPDFbookFetcher\\Microbiology Metadata.csv"
 driver = webdriver.Chrome(service = ChromeService(executable_path=ChromeDriverManager().install()))
 
 for filename in os.listdir(source_folder_path):
