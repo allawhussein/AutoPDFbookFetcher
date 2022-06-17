@@ -11,7 +11,7 @@ def csv_book_details(book_name, book_authors, book_review, publication_date, boo
             return csv_book_details(book_name, book_authors, book_review, publication_date, book_path, image_path, csv_path)
 
     with open(csv_path, 'a') as csv_file:
-        csv_file.write(', '.join([book_name, book_authors, book_review, publication_date, book_path, image_path]) + "\n")
+        csv_file.write('|'.join([book_name, book_authors, book_review, publication_date, book_path, image_path]) + "\n")
 
 
 if __name__ == "__main__":
